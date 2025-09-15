@@ -1,0 +1,16 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Posts</h2>
+
+  <div class="row gy-3">
+    @if(filteredPosts.length === 0) {
+      <div class="col-12">
+        <p class="text-center">No posts found.</p>
+      </div>
+    }
+    @for (post of filteredPosts; track $index) {
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <app-post class="w-100 h-100" [post]="post"></app-post>
+      </div>
+    }
+  </div>
+</div>
