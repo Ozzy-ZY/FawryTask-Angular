@@ -1,0 +1,12 @@
+<nav class="bg-danger">
+    <div class="container mx-auto d-flex px-4 py-2 align-items-center justify-content-center gap-3">
+        <div class="search-box bg-white px-3 py-2 d-flex align-items-center gap-2 rounded flex-grow-1">
+            <i class="pi pi-search search-icon"></i>
+            <input (keydown.enter)="print()" [(ngModel)]="searchKey" class = "border-0 d-flex flex-grow-1" type="text" pInputText placeholder="Search...">            
+        </div>
+        <div class="search-button" (click)="print()">
+            <p-button label="Search" icon="pi pi-search"
+            rounded="true"/>
+        </div>
+    </div>
+</nav>
